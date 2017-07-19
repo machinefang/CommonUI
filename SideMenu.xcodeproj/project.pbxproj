@@ -12,6 +12,10 @@
 		674EB23E1F1F9DEF00584596 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 674EB23C1F1F9DEF00584596 /* Main.storyboard */; };
 		674EB2401F1F9DEF00584596 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 674EB23F1F1F9DEF00584596 /* Assets.xcassets */; };
 		674EB2431F1F9DEF00584596 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 674EB2411F1F9DEF00584596 /* LaunchScreen.storyboard */; };
+		674EB24B1F1F9F4D00584596 /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674EB24A1F1F9F4D00584596 /* SideMenuTableViewCell.swift */; };
+		674EB24E1F1FA88D00584596 /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674EB24D1F1FA88D00584596 /* SlideMenuController.swift */; };
+		674EB2501F1FAFD200584596 /* MainContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674EB24F1F1FAFD200584596 /* MainContainerVC.swift */; };
+		674EB2521F1FB22F00584596 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674EB2511F1FB22F00584596 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,11 @@
 		674EB23F1F1F9DEF00584596 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		674EB2421F1F9DEF00584596 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		674EB2441F1F9DEF00584596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		674EB24A1F1F9F4D00584596 /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
+		674EB24C1F1FA87E00584596 /* SlideMenuControllerSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlideMenuControllerSwift.h; sourceTree = "<group>"; };
+		674EB24D1F1FA88D00584596 /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuController.swift; sourceTree = "<group>"; };
+		674EB24F1F1FAFD200584596 /* MainContainerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainContainerVC.swift; sourceTree = "<group>"; };
+		674EB2511F1FB22F00584596 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +63,17 @@
 		674EB2371F1F9DEF00584596 /* SideMenu */ = {
 			isa = PBXGroup;
 			children = (
+				674EB24D1F1FA88D00584596 /* SlideMenuController.swift */,
+				674EB24C1F1FA87E00584596 /* SlideMenuControllerSwift.h */,
 				674EB2381F1F9DEF00584596 /* AppDelegate.swift */,
 				674EB23A1F1F9DEF00584596 /* ViewController.swift */,
 				674EB23C1F1F9DEF00584596 /* Main.storyboard */,
+				674EB24A1F1F9F4D00584596 /* SideMenuTableViewCell.swift */,
 				674EB23F1F1F9DEF00584596 /* Assets.xcassets */,
 				674EB2411F1F9DEF00584596 /* LaunchScreen.storyboard */,
 				674EB2441F1F9DEF00584596 /* Info.plist */,
+				674EB24F1F1FAFD200584596 /* MainContainerVC.swift */,
+				674EB2511F1FB22F00584596 /* HomeViewController.swift */,
 			);
 			path = SideMenu;
 			sourceTree = "<group>";
@@ -136,8 +150,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				674EB24B1F1F9F4D00584596 /* SideMenuTableViewCell.swift in Sources */,
 				674EB23B1F1F9DEF00584596 /* ViewController.swift in Sources */,
+				674EB24E1F1FA88D00584596 /* SlideMenuController.swift in Sources */,
 				674EB2391F1F9DEF00584596 /* AppDelegate.swift in Sources */,
+				674EB2501F1FAFD200584596 /* MainContainerVC.swift in Sources */,
+				674EB2521F1FB22F00584596 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +317,7 @@
 				674EB2491F1F9DEF00584596 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
