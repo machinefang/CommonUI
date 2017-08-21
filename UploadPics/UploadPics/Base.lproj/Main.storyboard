@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lgD-Cx-N1G">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UploadPics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ys-F7-1tG">
+                                <rect key="frame" x="0.0" y="637" width="375" height="30"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="cameraButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J2J-OA-oWv"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JiF-NR-Xf5">
+                                <rect key="frame" x="0.0" y="64" width="375" height="346"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="346" id="ztp-Md-PRB"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAg-7H-MsN">
+                                <rect key="frame" x="0.0" y="608" width="375" height="30"/>
+                                <state key="normal" title="Upload"/>
+                                <connections>
+                                    <action selector="uploadButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G4X-c4-u0I"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6Ys-F7-1tG" secondAttribute="trailing" id="1Og-Aj-yqY"/>
+                            <constraint firstItem="6Ys-F7-1tG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9yW-ZN-MSC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6Ys-F7-1tG" secondAttribute="bottom" id="DTn-Df-uqo"/>
+                            <constraint firstItem="JiF-NR-Xf5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="DiJ-aR-3fN"/>
+                            <constraint firstItem="6Ys-F7-1tG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LNM-4e-2VK"/>
+                            <constraint firstAttribute="bottom" secondItem="uAg-7H-MsN" secondAttribute="bottom" constant="29" id="Q09-sg-BOS"/>
+                            <constraint firstAttribute="trailing" secondItem="uAg-7H-MsN" secondAttribute="trailing" id="UV7-AO-I34"/>
+                            <constraint firstItem="uAg-7H-MsN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YdT-wv-L6w"/>
+                            <constraint firstAttribute="trailing" secondItem="JiF-NR-Xf5" secondAttribute="trailing" id="bOY-B0-s1J"/>
+                            <constraint firstItem="uAg-7H-MsN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qBQ-x5-PE0"/>
+                            <constraint firstItem="JiF-NR-Xf5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rRe-W8-nqF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jHq-lI-eNj"/>
+                    <connections>
+                        <outlet property="cameraButton" destination="6Ys-F7-1tG" id="b3N-5n-caZ"/>
+                        <outlet property="imageView" destination="JiF-NR-Xf5" id="sKU-Qy-dnY"/>
+                        <outlet property="uploadButton" destination="uAg-7H-MsN" id="ry4-Ou-Ye5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1079.2" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="alB-Wr-ftX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lgD-Cx-N1G" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sjt-QQ-iPC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="z9R-XY-Liz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lWx-4V-q4v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="509.60000000000002" y="-543.77811094452773"/>
+        </scene>
+    </scenes>
+</document>
