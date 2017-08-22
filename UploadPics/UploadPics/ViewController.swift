@@ -7,8 +7,22 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
+protocol FirebaseReferences {}
+extension FirebaseReferences {
+    var dbRef : DatabaseReference {
+        return Database.database().reference()
+    }
+    var userid : String? {
+        return Auth.auth().currentUser?.uid
+    }
+}
+
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, FirebaseReferences {
     var imagePicker : UIImagePickerController = UIImagePickerController()
 
     @IBOutlet weak var cameraButton: UIButton!
@@ -53,10 +67,30 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     }
 
-     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         print("info of the pic reached :\(info) ")
         self.imagePicker.dismiss(animated: true, completion: nil)
         self.imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        
+        
+        var data = NSData()
+        data = UIImageJPEGRepresentation(self.imageView.image!, 0.8)! as NSData
+        // set upload path
+        let filePath = "\(Auth.auth().currentUser!.uid)/\("userPhoto")"
+        let metaData = StorageMetadata()
+        metaData.contentType = "image/jpg"
+        self.dbRef.child(filePath).putData(data, metadata: metaData){(metaData,error) in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }else{
+                //store downloadURL
+                let downloadURL = metaData!.downloadURL()!.absoluteString
+                //store downloadURL at database
+                self.databaseRef.child("users").child(FIRAuth.auth()!.currentUser!.uid).updateChildValues(["userPhoto": downloadURL])
+            }
+            
+        }
         
     }
 
